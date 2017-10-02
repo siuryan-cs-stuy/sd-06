@@ -6,7 +6,7 @@ app = Flask(__name__)
 def index():
     response = None
     if request.method == 'POST':
-        response = request.args['textbox']
+        response = request.form['textbox']
     return render_template('index.html', request_method = request.method, response = response)
 
 if __name__ == '__main__':
