@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Enter a username!</h1>
+<form method="POST">
+  <input type="text" name="textbox">
+  <input type="submit">
+</form>
+<p>Request method: {{ request_method }}</p>
+{% if response %}
+<p>Hello, {{ response }}!</p>
+{% endif %}
+
+{% endblock %}
